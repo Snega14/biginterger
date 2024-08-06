@@ -1,0 +1,26 @@
+import java.math.BigInteger;
+import java.util.Scanner;
+
+public class PrimeChecker {
+
+    public static void main(String[] args) {
+        // Create a Scanner object to read input
+        Scanner scanner = new Scanner(System.in);
+        
+        // Read the input line (number to be checked)
+        String input = scanner.nextLine();
+        
+        // Convert the input string to a BigInteger
+        BigInteger number = new BigInteger(input);
+        
+        // Check if the number is a probable prime
+        if (number.isProbablePrime(1)) { // The certainty parameter is set to 1 for a basic check
+            System.out.println("prime");
+        } else {
+            System.out.println("not prime");
+        }
+        
+        // Close the scanner
+        scanner.close();
+    }
+}
